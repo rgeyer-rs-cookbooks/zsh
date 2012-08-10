@@ -15,6 +15,8 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+rightscale_marker :begin
+
 omz_dir = ::File.join(ENV['HOME'], '.omz')
 zshrc = ::File.join(ENV['HOME'], '.zshrc')
 
@@ -28,3 +30,5 @@ template zshrc do
   backup 1
   source 'zshrc.erb'
 end
+
+rightscale_marker :end

@@ -1,9 +1,13 @@
 maintainer       "Ryan J. Geyer"
 maintainer_email "me@ryangeyer.com"
-license          IO.read(File.join(File.dirname(__FILE__), '..', '..', 'LICENSE-2.0.txt'))
+license          "Apache 2"
 description      "Installs/Configures zsh"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
 version          "0.0.1"
+
+supports "mac_os_x"
+
+depends "rightscale"
 
 recipe "zsh::default", "Doesn't really do much"
 recipe "zsh::do_set_as_user_shell", "Sets the current users shell to zsh permanently.  This should be run interactively with sudo"

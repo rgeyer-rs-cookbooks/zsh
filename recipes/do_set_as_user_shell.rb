@@ -15,6 +15,8 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+rightscale_marker :begin
+
 zsh_path = `which zsh`
 
 # This probably could be handled by an "install" recipe
@@ -36,3 +38,5 @@ end
 bash "Set zsh as the default shell for current user" do
   code "chsh -s #{zsh_path}"
 end
+
+rightscale_marker :end
